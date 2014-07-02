@@ -10,7 +10,7 @@ flash で作成したデータを [tmlib.js](http://phi-jp.github.io/tmlib.js/) 
 ### Convert
 
 - Flash で色々作る
-- fl2tmfl.jsfl を実行
+- fl2tmfl.jsfl を実行(flash上で jsfl ファイルを開いて実行できます)
 - flash があるところに .tmfl ファイルが出力される(sample.fla だったら sample/sample.tmfl)
 
 ### Run
