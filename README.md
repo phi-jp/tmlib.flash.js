@@ -23,6 +23,20 @@ flash で作成したデータを [tmlib.js](http://phi-jp.github.io/tmlib.js/) 
 var elm = tm.flash.Element("sample").addChildTo(this);
 ```
 
+### Script
+
+アクションスクリプト内で下記のように書くと js を実行できます.
+
+```js
+
+/* Js
+
+alert("hoge");
+
+*/
+
+```
+
 ## Rule/Regulation
 
 - レイヤー名が重複すると困るかも
