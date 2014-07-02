@@ -151,7 +151,12 @@ var exportLayerFrame = function(tl, index) {
         if (!elm) {
             obj[layer.name] = {
                 active: false,
+                actionScript: frame.actionScript,
             };
+
+            if (frame.actionScript) {
+                obj[layer.name]["actionScript"] = frame.actionScript;
+            }
             return ;
         }
         

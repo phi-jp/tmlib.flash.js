@@ -34,8 +34,7 @@ tm.define("MainScene", {
     init: function() {
         this.superInit();
         
-        var elm = tm.flash.Element("sample", {
-        }).addChildTo(this);
+        var elm = tm.flash.Element("sample").addChildTo(this);
         
         this.flashElement = elm;
     },

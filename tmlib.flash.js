@@ -76,7 +76,7 @@ tm.define("tm.flash.Element", {
         this.superInit();
         
         this.path = path;
-        this.funcs = funcs;
+        this.funcs = funcs || {};
         
         var flashData = tm.asset.AssetManager.get(path);
         this.data = flashData.data;
@@ -134,6 +134,12 @@ tm.define("tm.flash.Element", {
             var frameData = layerData.frames[frame];
             if (!frameData) return ;
 
+            // run code
+            if (frameData.actionScript) {
+                var code = frameData.actionScript.replace('/* js', '').replace('*/', '');
+                eval(code);
+            }
+
             // アクティブかどうかをチェック
             if (frameData.active == false) {
                 elm.hide();
@@ -171,12 +177,6 @@ tm.define("tm.flash.Element", {
                 else {
                     elm.hide();
                 }
-            }
-
-            // run code
-            if (frameData.actionScript) {
-                var code = frameData.actionScript.replace('/* js', '').replace('*/', '');
-                eval(code);
             }
         }.bind(this));
         
