@@ -28,13 +28,11 @@ var elm = tm.flash.Element("sample").addChildTo(this);
 アクションスクリプト内で下記のように書くと js を実行できます.
 
 ```js
-
 /* Js
 
 alert("hoge");
 
 */
-
 ```
 
 ## Rule/Regulation
