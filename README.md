@@ -7,11 +7,21 @@ flash で作成したデータを [tmlib.js](http://phi-jp.github.io/tmlib.js/) 
 
 ## Usage
 
+### Convert
+
 - Flash で色々作る
 - fl2tmfl.jsfl を実行
-- flash があるところに .tmfl ファイルが出力される
-- あとは tmlib.flash.js でゴニョゴニュやる予定
+- flash があるところに .tmfl ファイルが出力される(sample.fla だったら sample/sample.tmfl)
 
+### Run
+
+- html で tmlib.js と tmlib.flash.js を読み込む
+- LoadingScene で .tmfl ファイルを読み込む
+- 読み込んだファイルを指定して tm.flash.Element クラスを生成
+
+```js
+var elm = tm.flash.Element("sample").addChildTo(this);
+```
 
 ## Rule/Regulation
 
